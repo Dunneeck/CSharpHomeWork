@@ -41,6 +41,6 @@
 // System.Console.WriteLine("Ваше число не палиндром");
 
 
- 
+ // object[] arr  = {'h', "строка", 22, 22f, true};
  
 
