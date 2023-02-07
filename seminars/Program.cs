@@ -46,20 +46,6 @@
 //  System.Console.WriteLine(string.Join(", ", array));
 
 // int x = Convert.ToInt32(Console.ReadLine());
-int ReadInt(string message)
-{
-    Console.Write(message);
-    return int.Parse(Console.ReadLine() ?? "0");
-}
-int[] NewArray(int size, int min, int max)
-{
-    int[] arr = new int[size];
-    for (int i = 0; i < arr.Length; i++)
-        arr[i] = new Random().Next(min,max);
-    return arr;
-}
-
-
 
 
 // int a = ReadInt("Введите первую сторону");
@@ -82,9 +68,57 @@ int[] NewArray(int size, int min, int max)
 //     }
 //     Console.Write(s);
 
-int[] ar = NewArray(5,-10,10);
+// for (int i = 0; i < array.GetLength(0); i++)
+// {
+//     res += array[i,i];
+// }
+// Console.WriteLine(res);
 
-System.Console.WriteLine(string.Join(" ", ar));
 
 
 
+
+
+
+
+
+
+
+void PrintArray<T>(T[,] arr)
+{
+    for (int i = 0; i < arr.GetLength(0); i++)
+    {
+        for (int j = 0; j < arr.GetLength(1); j++)
+        {
+            Console.Write($"{arr[i, j]}  ");
+        }
+        Console.WriteLine();
+    }
+}
+
+int ReadInt(string message)
+{
+    Console.Write(message);
+    return int.Parse(Console.ReadLine() ?? "0");
+}
+int[,] NewArray(int column, int row, int min, int max)
+{
+    int[,] arr = new int[column, row];
+    for (int i = 0; i < arr.GetLength(0); i++)
+        for (int j = 0; j < arr.GetLength(1); j++)
+        {
+            arr[i, j] = new Random().Next(min, max);
+        }
+    return arr;
+}
+
+float[,] NewArrayFloat(int column, int row, int min, int max)
+{
+    float[,] arr = new float[column, row];
+    for (int i = 0; i < arr.GetLength(0); i++)
+        for (int j = 0; j < arr.GetLength(1); j++)
+        {
+            arr[i, j] = new Random().Next(min, max) + Convert.ToSingle(new Random().NextDouble());
+        }
+    return arr;
+}
