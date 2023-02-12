@@ -218,14 +218,14 @@ while (true)
         int[] array = new int[arr.Length];
         for (int i = 0; i < array.Length; i++)
         {
-            array[i] = rnd.Next(0, 20);
+            array[i] = rnd.Next(10, 40);
             if (i >= 1)
             {
                 for (int j = 0; j < i; j++)
                 {
                     while (array[i] == array[j])
                     {
-                        array[i] = rnd.Next(0, 20);
+                        array[i] = rnd.Next(10, 40);
                         j = 0;
                     }
                 }
