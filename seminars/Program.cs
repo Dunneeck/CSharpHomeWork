@@ -76,11 +76,63 @@
 
 
 
+// int[] num = new int[10]{0,1,2,3,4,5,6,7,8,9};
+
+// int[] count = new int[10];
+
+// int[] array = new int[20];
+
+// for (int i = 0; i < array.Length; i++)
+// {
+//     array[i] = new Random().Next(0, 10);
+// }
+
+// for (int i = 0; i < array.Length; i++)
+// {
+//     System.Console.Write($" {array[i]} ");
+// }
+// for (int i = 0; i < num.Length; i++)
+// {
+//     for (int j = 0; j < array.Length; j++)
+//     {
+//             if (array[j] == num[i])
+//                  count[i]++;
+  
+//     }
+
+// }
+// System.Console.WriteLine();
+// for (int i = 0; i < num.Length; i++)
+// {
+//     System.Console.WriteLine($" Число {num[i]} было в массиве столько раз {count[i]}");
+// }
 
 
 
+// int[] num = new int[10]{0,1,2,3,4,5,6,7,8,9};
 
+// int[] count = new int[10];
 
+// int[,] arr = NewArray(3,5,0,10);
+
+// PrintArray(arr);
+
+// for (int i = 0; i < num.Length; i++)
+// {
+//     for (int j = 0; j < arr.GetLength(0); j++)
+//     {
+//         for (int k = 0; k < arr.GetLength(1); k++)
+//         {
+//             if (arr[j,k] == num[i])
+//                     count[i]++;
+//         }
+//     }
+// }
+
+// for (int i = 0; i < num.Length; i++)
+// {
+//     System.Console.WriteLine($" Число {num[i]} было в массиве столько раз {count[i]}");
+// }
 
 
 
@@ -96,11 +148,13 @@ void PrintArray<T>(T[,] arr)
     }
 }
 
+
 int ReadInt(string message)
 {
     Console.Write(message);
     return int.Parse(Console.ReadLine() ?? "0");
 }
+
 int[,] NewArray(int column, int row, int min, int max)
 {
     int[,] arr = new int[column, row];
@@ -111,6 +165,7 @@ int[,] NewArray(int column, int row, int min, int max)
         }
     return arr;
 }
+
 
 float[,] NewArrayFloat(int column, int row, int min, int max)
 {
